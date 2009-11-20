@@ -1,0 +1,12 @@
+? extends 'base.html';
+
+? block title => sub {
+<?= $entry->title ?>
+? }
+
+? block content => sub {
+<h1><?= $entry->title ?></h1>
+
+<?= encoded_string $entry->body ?>
+
+? }

@@ -1,0 +1,12 @@
+? extends 'base.html';
+
+? block content => sub {
+
+<ul>
+? my $day = 0;
+? for my $entry (@{ $page->entries }) {
+    <li><a href="<?= $entry->path ?>/<?= $entry->filename ?>.html"><?= $entry->title ?> - <?= ++$day ?>日目</a></li>
+? }
+</ul>
+
+? }
